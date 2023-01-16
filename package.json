@@ -24,6 +24,7 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
-    "@svgr/webpack": "^6.5.1"
+    "@svgr/webpack": "^6.5.1",
+    "@types/blueimp-md5": "^2.18.0"
   }
 }
