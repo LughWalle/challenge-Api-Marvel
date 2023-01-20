@@ -19,7 +19,7 @@ const Home = () => {
       <Head>
         <title>Marvel - heros</title>
         <meta name="description" content="created by Lugh" />
-        <link rel="icon" href="/ironman.ico" />
+        <link rel="icon" href="../assets/ironman.ico" />
       </Head>
       <Header />
       <Hero />
