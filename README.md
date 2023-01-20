@@ -56,3 +56,5 @@ O projeto consiste na ultilização da [marvel comics API](https://developer.mar
 	- Thanos
 	- Homem de Ferro
 - Lista com personagens da Marvel
+
+### Projeto rodando [aqui](https://storied-medovik-1f7bd4.netlify.app/)
