@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import ReactPaginate from 'react-paginate';
 import Card from '_components/ui/card';
 import styles from './styles.module.scss'
 import { MarvelContext } from '_context/MarvelContext';

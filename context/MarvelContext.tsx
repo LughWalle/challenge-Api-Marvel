@@ -46,14 +46,19 @@ export const MarvelProvider = ({ children }: ProviderChildrenProp) => {
   const [featChars, setFeatChars] = useState<characters[]>([])
   const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState<string>('')
+  const [offset, setOffset] = useState<number>(30)
+
   const getChars = (offset?: number | null) => {
     apiMarvel.get('/characters', {
       params: {
         offset,
       }
     })
-      .then((res) => {
-        offset ? setChars([...chars, ...res.data.data.results]) : setChars(res.data.data.results)
+      .then(({ data: { data} }) => {
+        console.log(data);
+        
+        // offset ? setChars([...chars, ...data.results]) : setChars(data.results)
+        setChars(data.results)
       })
       .catch(err => console.log(err))
   }
@@ -64,9 +69,7 @@ export const MarvelProvider = ({ children }: ProviderChildrenProp) => {
     features.forEach((feat) => {
       apiMarvel.get(`/characters/${feat.id}`)
       .then((res) => {
-        const [ char ] = res.data.data.results
-        console.log('tem que ser apenas um objeto', char);
-        console.log('tem que ser um array de objetos', featChars);
+        const [ char ] = res.data.data.results;
         setFeatChars(prev => [...prev, char])
         setLoading(false)
       })
@@ -87,6 +90,8 @@ export const MarvelProvider = ({ children }: ProviderChildrenProp) => {
     async () => {
       try {
         const offset = chars.length;
+        console.log('offset: ', offset);
+        
         getChars(offset)
       } catch (err) {
         console.log(err);        
