@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -19,32 +21,34 @@ time, mark, audio, video {
     background:transparent;
 }
 
-figcaption, footer,header,hgroup,menu, nav, section, main, article, aside, figure, details, summary {
-    display:block;
-}
 
 html {
-  font-size: 62.5%;
-  line-height: 1.5;
-  box-sizing: border-box;
-  overflow-y: scroll;
+    font-size: 62.5%;
+    line-height: 1.5;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    body {
+        font-size: 1.6rem;
+        font-family: $open-sans;
+        display: block;
+    }
 }
 
-body {
-  font-size: 1.6rem;
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+figcaption, footer,header,hgroup,menu, nav, section, main, article, aside, figure, details, summary {
+    display:block;
 }
 
 *,
 *:before,
 *:after {
-	box-sizing: inherit;
+    box-sizing: border-box;
 }
 
-
-nav ul {
+nav ul, ul {
     list-style: none;
+    display: block
 }
+
 
 blockquote, q {
     quotes: none;
@@ -75,7 +79,7 @@ del {
 }
 
 abbr[title], dfn[title] {
-    border-bottom: 1px dotted #000;
+    border-bottom: 0.1rem dotted #000;
     cursor: help;
 }
 
@@ -90,10 +94,10 @@ td {font-weight: normal; vertical-align: middle;}
 /* change border colour to suit your needs */
 hr {
     display:block;
-    height:1px;
+    height: 0.1rem;
     border:0;  
-    border-top:1px solid #cccccc;
-    margin:1em 0;
+    border-top: 0.1rem solid #cccccc;
+    margin:0.1rem 0;
     padding:0;
 }
 

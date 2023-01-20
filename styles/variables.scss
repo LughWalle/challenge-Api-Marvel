@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 // COLORS
 
 $color-primary: #ED1B24;
@@ -5,17 +8,23 @@ $color-bg-footer: #222222;
 $color-gray: #9B9B9B;
 $color-white: #FFFFFF;
 $color-black: #000000;
+$color-gray-light: #F2F2F2;
 
 // BREAKPOINTS
 
-$mobile-small: 37.5rem;      // 375px;
-$mobile-large: 41rem;      // 410px;
-$tablet-small: 57.6rem;      // 576px;
-$tablet-medium: 76.8rem;      // 768px;
-$tablet-large: 102.4rem;      // 1024px;
-$desktop-small: 128rem;      // 1280px;
-$desktop-medium: 144rem;      // 1440px;
-$desktop-large: 192rem;      // 1920px;
+$xxx-small: 375px;
+$xx-small: 410px;
+$x-small: 576px;
+$small: 768px;
+$medium: 1024px;
+$large: 1280px;
+$x-large: 1440px;
+$xx-large: 1920px;
+
+// FONT FAMILY
+
+$open-sans: 'Open Sans', sans-serif;
+$oswald: 'Oswald', sans-serif;
 
 // FONT SIZES
 
@@ -36,3 +45,8 @@ $lineHeight-medium: 2.5rem;
 $lineHeight-small: 2.6rem;
 $lineHeight-x-small: 1.4;
 $lineHeight-xx-small: 5rem;
+
+// BACKGROUND
+
+$base-url-image: '../../assets/';
+$bg-hero: $base-url-image + 'bg-hero.jpg'
