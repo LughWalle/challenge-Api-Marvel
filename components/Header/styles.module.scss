@@ -1,0 +1,23 @@
+@import '_styles/variables.scss';
+
+.container {
+  width: 100vw;
+  .content {
+    height: 10.5rem;
+    padding-inline: 3.6rem;
+    display: flex;
+    flex-direction: row;
+    background-color: $color-black;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-white;
+    .navBar {
+      .menu {
+        display: flex;
+        font-weight: bold;
+        font-size: $font-x-small;
+        gap: 3.6rem;
+      }
+    }
+  }
+}

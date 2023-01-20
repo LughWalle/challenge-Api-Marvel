@@ -1,0 +1,194 @@
+@import '_styles/variables.scss';
+@import '_styles/breakpoints.scss';
+
+%font-title {
+  font-size: $font-small;
+  font-family: $oswald;
+  color: $color-white;
+  font-weight: 600;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  border-top: 0.1rem solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-black;
+  flex-direction: column;
+  padding-top: 5rem;
+  gap: 7.3rem;
+  .newsletter {
+    display: flex;
+    gap: 7.3rem;
+    .newsletterCall {
+      width: 40.8rem;
+      height: 32.9rem;
+      display: flex;
+      position: relative;
+      bottom: 13.9rem;
+      margin: auto;
+      padding: 6rem;
+      background-color: $color-primary;
+      .text {
+        font-size: $font-x-large;
+        font-weight: 700;
+        font-family: $oswald;
+        line-height: $lineHeight-x-large;
+        color: $color-white;
+      }
+    }
+    form {
+      .singup {
+        font-size: $font-medium;
+        font-weight: 700;
+        line-height: $lineHeight-medium;
+        color: $color-white;
+        font-family: $oswald;
+        width: 27.4rem;
+        margin-bottom: 4.8rem;
+       
+        .color {
+          color: $color-primary
+        }
+      }
+      label {
+        display: flex;
+        .betterEmail {
+          font-size: $font-xx-small;
+          font-weight: 700;
+          color: $color-white;
+          display: flex;
+          flex-direction: column;
+          .email {
+            all: unset;
+            margin-top: 0.9rem;
+            background-color: $color-white;
+            outline: 0.1rem solid $color-gray;
+            padding: 2.1rem;
+            width: 36.9rem;
+          }
+        }
+        
+        .btn {
+          align-self: end;
+        }
+        @include breakpoint(small) {
+          flex-direction: column;
+          .btn {
+            align-self: auto;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .mainFooter {
+    background-color: $color-bg-footer;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    padding-top: 6.8rem;
+    
+    .containerNav {
+      margin-inline: 13.5rem;
+      margin-bottom: 7.6rem;
+      max-width: 144rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .contentNav {
+        display: flex;
+        gap: 6.6rem;
+        
+        // .logo {
+          
+          // }
+          
+        .navMarvel {
+          .title {
+            @extend %font-title;
+          }
+          ul {
+            margin-top: .9rem;
+            font-size: $font-x-small;
+            color: $color-gray;
+            font-family: $open-sans;
+          }
+        }
+        
+        .navMidia {
+          .title {
+            @extend %font-title;
+          }
+          ul {
+            margin-top: .9rem;
+            font-size: $font-x-small;
+            color: $color-gray;
+            font-family: $open-sans;
+          }
+        }
+      }
+      
+    }
+    .contentSocialBlog {
+      display: flex;
+      gap: 9.4rem;
+      .lastPost {
+        .title {
+          @extend %font-title
+        }
+        .post {
+          margin-top: 1.7rem;
+          display: flex;
+          font-size: $font-x-small;
+          gap: 1.1rem;
+          .thumb {
+            width: 6rem;
+            height: 6rem;
+            object-fit: cover;
+          }
+          .description {
+            max-width: 23.5rem;
+            font-weight: 700;
+            color: $color-white;
+          }
+        }
+        .continue {
+            font-size: $font-x-small;
+            color: $color-gray;
+            font-family: $open-sans;
+        }
+      }
+      .follow {
+        .title {
+          @extend %font-title;
+        }
+        .midia {
+          margin-top: 1.7rem;
+          opacity: 0.4;
+          display: flex;
+          gap: 1.7rem;
+          .logo {
+            width: 2.4rem;
+            height: 2.4rem;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(large) {
+    .newsletter {
+      gap: unset;
+      flex-direction: column;
+    }
+    .mainFooter {
+      .containerNav {
+        flex-direction: column;
+        gap: 6.8rem;
+      }
+    }
+  }
+}
