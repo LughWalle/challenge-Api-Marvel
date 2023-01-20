@@ -9,4 +9,7 @@
   font-weight: 700;
   line-height: $lineHeight-x-small;
   background-color: $color-primary;
+  &:hover {
+    transform: scale(0.9);
+  }
 }

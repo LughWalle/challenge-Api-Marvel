@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react';
-import cs from 'classnames';
+import React, { useContext } from 'react';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import { MarvelContext } from '_context/MarvelContext';
 import Card from '_components/ui/card';
@@ -24,7 +23,7 @@ const Carousel = () => {
           <Slider className={styles.cardsList}>
             {
               featChars.map((char, i) => (
-                <Slide index={i}>
+                <Slide key={i} index={i}>
                   <Card variant='secondary' src={`${char.thumbnail.path}.${char.thumbnail.extension}`} title={char.name} />
                 </Slide>
               )
@@ -46,6 +45,8 @@ const Carousel = () => {
         >
           <ContentCarousel />
         </CarouselProvider>
+
+        {/* CARROSSEL para quando a tela ta media */}
         <CarouselProvider
           naturalSlideWidth={52}
           naturalSlideHeight={58}
