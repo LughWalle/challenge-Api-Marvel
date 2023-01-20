@@ -1,0 +1,56 @@
+@import '_styles/variables.scss';
+@import '_styles/breakpoints.scss';
+
+%carousel {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    .title {
+      font-family: $oswald;
+      font-weight: 400;
+      font-size: $font-large;
+      line-height: $lineHeight-large;
+    }
+    .btnNav {
+      display: flex;
+      gap: 1rem;
+      padding-bottom: 3.9rem;
+      .btn {
+        all: unset;
+        .left {
+          transform: rotateZ(180deg);
+        }
+      }
+    }
+  }
+}
+
+.container {
+  color: $color-white;
+  height: 83rem;
+  margin: auto;
+  width: $x-large;
+  padding: 24.7rem 13.5rem 22.6rem;
+  .carousel {
+    @extend %carousel
+  }
+  .carouselMedium {
+    display: none;
+    @extend %carousel
+  }
+  
+  @include breakpoint(medium) {
+    .carousel {
+      display: none;
+    }
+    .carouselMedium {
+      display: block;
+    }
+  }
+  @include breakpoint(large) {
+    padding-inline: 2.5rem;
+  }
+  @include breakpoint(x-large) {
+    width: unset;
+  }
+}

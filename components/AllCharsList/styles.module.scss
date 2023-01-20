@@ -1,0 +1,39 @@
+@import '_styles/variables.scss';
+@import '_styles/breakpoints.scss';
+
+.main {
+  min-height: 100vh;
+  max-width: $x-large;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  padding: 14.8rem 0 0 0;
+
+  .titleList {
+    font-family: $oswald;
+    font-size: $font-large;
+    font-weight: 500;
+    line-height: $lineHeight-large;
+    margin-inline: 13.5rem;
+    margin-bottom: 3.9rem;
+    @include breakpoint(small) {
+      margin-inline: auto;
+    }
+  }
+
+  .charsList {
+    display: flex;
+    flex-flow: wrap;
+    gap: 3rem;
+    margin-inline: 13.5rem;
+    justify-content: center;
+    @include breakpoint(large) {
+      margin: 0;
+    }
+  }
+  .btnMore {
+    align-self: center;
+    margin-top: 8.5rem;
+    margin-bottom: 14.1rem;
+  }
+}

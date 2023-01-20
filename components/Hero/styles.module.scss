@@ -1,0 +1,35 @@
+@import '_styles/variables.scss';
+@import '_styles/breakpoints.scss';
+
+.container {
+  .content {
+    max-width: 144rem;
+    .bgHero {
+      // margin-inline: 13.5rem;
+      padding: 27.2rem 13.5rem 0;
+      width: 100vw;
+      height: 62.3rem;
+      background: linear-gradient($color-black, rgba($color-black, 34%), $color-black), url($bg-hero);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .title {
+        width: 59.2rem;
+        font-size: $font-xx-large;
+        font-family: $oswald;
+        font-weight: bold;
+        color: $color-white;
+        line-height: $lineHeight-xx-large;
+        @include breakpoint(small) {
+          width: unset;
+          font-size: $font-x-large;
+          line-height: $lineHeight-x-large;
+        }
+      }
+    }
+    .carrossel {
+      background-color: $color-black;
+      width: 100vw;
+    }
+  }
+}

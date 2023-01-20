@@ -1,9 +1,19 @@
 import Head from 'next/head'
-import Logo from '_assets/logo.svg'
+import styles from './Home.module.scss'
+import AllCharsList from '_components/AllCharsList';
+import Header from '_components/Header';
+import Hero from '_components/Hero';
+import { MarvelContext } from '_context/MarvelContext';
+import { useContext, useEffect } from 'react';
+import Footer from '_components/Footer';
+import CredCard from '_components/CredCard';
 
-import styles from '_styles/Home.module.scss'
-
-export default function Home() {
+const Home = () => {
+  const { loading, setLoading } = useContext(MarvelContext)
+  useEffect(() => {
+    setLoading(!loading)    
+  }, [])
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -11,22 +21,12 @@ export default function Home() {
         <meta name="description" content="created by Lugh" />
         <link rel="icon" href="/ironman.ico" />
       </Head>
-
-      <main className={styles.main}>
-        
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className={styles.logo}>
-            <Logo width={44.24} height={67} />
-          </span>
-        </a>
-      </footer>
+      <Header />
+      <Hero />
+      <AllCharsList />
+      <CredCard />
+      <Footer />
     </div>
   )
-}
+};
+export default Home;
