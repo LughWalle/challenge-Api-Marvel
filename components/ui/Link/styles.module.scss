@@ -1,0 +1,12 @@
+@import '_styles/variables.scss';
+
+.link {
+  color: $color-primary;
+  font-size: $font-x-small;
+  line-height: $lineHeight-x-small;
+  font-weight: 700;
+  text-decoration: none;
+  &.secondary {
+    color: $color-white;
+  }
+}

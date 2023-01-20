@@ -1,0 +1,12 @@
+@import '_styles/variables.scss';
+
+.btn {
+  all: unset;
+  color: $color-white;
+  padding: 0 9rem;
+  height: 6.1rem;
+  font-size: $font-x-small;
+  font-weight: 700;
+  line-height: $lineHeight-x-small;
+  background-color: $color-primary;
+}
